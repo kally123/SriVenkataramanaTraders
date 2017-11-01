@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_customerproducts})}|">Show CustomerProducts - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${customerProducts}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="customerproducts-product-field" data-z="c5558951">
+            	      <strong data-th-text="#{label_customerproducts_product}">product</strong>
+                    <span data-th-text="*{{product}}">productValue</span>
+         	        </li>
+                  <li id="customerproducts-quantity-field" data-z="f009f26d">
+            	      <strong data-th-text="#{label_customerproducts_quantity}">quantity</strong>
+                    <span data-th-text="*{{quantity}}">quantityValue</span>
+         	        </li>
+                  <li id="customerproducts-totalproducttax-field" data-z="7fb58931">
+            	      <strong data-th-text="#{label_customerproducts_totalproducttax}">totalProductTax</strong>
+                    <span data-th-text="*{{totalProductTax}}">totalProductTaxValue</span>
+         	        </li>
+                  <li id="customerproducts-finalproducttax-field" data-z="f58a5af1">
+            	      <strong data-th-text="#{label_customerproducts_finalproducttax}">finalProductTax</strong>
+                    <span data-th-text="*{{finalProductTax}}">finalProductTaxValue</span>
+         	        </li>
+                  <li id="customerproducts-customer-field" data-z="bd53d40d">
+            	      <strong data-th-text="#{label_customerproducts_customer}">customer</strong>
+                    <span data-th-text="*{{customer}}">customerValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_product})}|">Show Product - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${product}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_product})}">Show Product</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_product})}">Product data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="product-productname-field" data-z="d81edefa">
+            	      <strong data-th-text="#{label_product_productname}">productName</strong>
+                    <span data-th-text="*{{productName}}">productNameValue</span>
+         	        </li>
+                  <li id="product-productdescription-field" data-z="d3347484">
+            	      <strong data-th-text="#{label_product_productdescription}">productDescription</strong>
+                    <span data-th-text="*{{productDescription}}">productDescriptionValue</span>
+         	        </li>
+                  <li id="product-applicablefrom-field" data-z="a18c57c4">
+            	      <strong data-th-text="#{label_product_applicablefrom}">applicableFrom</strong>
+                    <span data-th-text="*{{applicableFrom}}">applicableFromValue</span>
+         	        </li>
+                  <li id="product-hsnsac-field" data-z="ab464764">
+            	      <strong data-th-text="#{label_product_hsnsac}">hsnSac</strong>
+                    <span data-th-text="*{{hsnSac}}">hsnSacValue</span>
+         	        </li>
+                  <li id="product-taxability-field" data-z="9c835364">
+            	      <strong data-th-text="#{label_product_taxability}">taxability</strong>
+                    <span data-th-text="*{{taxability}}">taxabilityValue</span>
+         	        </li>
+                  <li id="product-productquantity-field" data-z="289b297a">
+            	      <strong data-th-text="#{label_product_productquantity}">productQuantity</strong>
+                    <span data-th-text="*{{productQuantity}}">productQuantityValue</span>
+         	        </li>
+                  <li id="product-customerproducts-field" data-z="9d3bb764">
+            	      <strong data-th-text="#{label_product_customerproducts}">customerProducts</strong>
+                    <span data-th-text="*{{customerProducts}}">customerProductsValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Product_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('ProductsItemThymeleafController').to('editForm').with('product', product.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Product_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ProductsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>
